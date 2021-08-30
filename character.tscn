@@ -1,0 +1,21 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://models/posed.glb" type="PackedScene" id=1]
+[ext_resource path="res://models/Tmp01_High-poly_Eye_brown.material" type="Material" id=2]
+[ext_resource path="res://models/Tmp01_Ponytail01_Ponytail01.material" type="Material" id=3]
+[ext_resource path="res://models/plus_normal.material" type="Material" id=4]
+[ext_resource path="res://character.gd" type="Script" id=5]
+[ext_resource path="res://models/glass.tres" type="Material" id=6]
+
+[node name="character" instance=ExtResource( 1 )]
+script = ExtResource( 5 )
+
+[node name="Tmp01Body" parent="Tmp01_deform/Skeleton" index="0"]
+material/0 = ExtResource( 4 )
+
+[node name="Tmp01High-poly" parent="Tmp01_deform/Skeleton" index="2"]
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 6 )
+
+[node name="Tmp01Ponytail01" parent="Tmp01_deform/Skeleton" index="6"]
+material/0 = ExtResource( 3 )
