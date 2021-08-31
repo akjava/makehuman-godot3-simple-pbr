@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://tester.gd" type="Script" id=1]
 [ext_resource path="res://default_env.tres" type="Environment" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://models/plus_normal.material" type="Material" id=6]
 [ext_resource path="res://models/plus_sss.material" type="Material" id=7]
 [ext_resource path="res://models/plus_metalic.material" type="Material" id=8]
+[ext_resource path="res://models/convert_albedo.material" type="Material" id=9]
 [ext_resource path="res://character.tscn" type="PackedScene" id=33]
 [ext_resource path="res://models/albedo.material" type="Material" id=34]
 
@@ -19,10 +20,10 @@ environment = ExtResource( 2 )
 
 [node name="Testers" type="Spatial" parent="."]
 
-[node name="Albedo" parent="Testers" instance=ExtResource( 3 )]
+[node name="Diffuse" parent="Testers" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 0 )
 
-[node name="character" parent="Testers/Albedo" instance=ExtResource( 33 )]
+[node name="character" parent="Testers/Diffuse" instance=ExtResource( 33 )]
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -1.181, -3.028 )
 material = ExtResource( 34 )
 
@@ -60,6 +61,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0 )
 [node name="character6" parent="Testers/+Metalic" instance=ExtResource( 33 )]
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -1.181, -3.028 )
 material = ExtResource( 8 )
+
+[node name="Albedo\?" parent="Testers" instance=ExtResource( 3 )]
+
+[node name="character7" parent="Testers/Albedo\?" instance=ExtResource( 33 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -1.181, -3.028 )
+material = ExtResource( 9 )
 
 [node name="CameraHolder" type="Spatial" parent="."]
 transform = Transform( 0.877582, 0, -0.479427, 0, 1, 0, 0.479427, 0, 0.877582, -36, 2.8, -4 )
