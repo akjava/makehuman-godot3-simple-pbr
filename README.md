@@ -8,9 +8,10 @@ simple godot3 pbr demo for human character with makehuman model
 
 ## This Project is Not Official
 based MIT Licensed [3D Material Testers Demo](https://godotengine.org/asset-library/asset/123)
+model files are around 90MB
 
 ## TODO
-improve hair,tooth.
+improve hair,tooth.glass-eye
 
 ## Tips
 To work SSS(Subsurface Scatter),Not godt setting Rendering/quality/intented usage/Frame Buffer Allocation
